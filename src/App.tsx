@@ -1,28 +1,47 @@
 import './App.css'
 
 function App() {
+  const now = new Date();
   return (
     <div className="appContainer">
       <h1>ToDo manager</h1>
 
-      <div className="newTaskForm">
+      <form className="newTaskForm">
         <h2 className="newTaskHeader">
           What needs to be done?
         </h2>
-        <div>
-          <label>
-            Assignee:
-          </label>
-          <select>
-            <option value="1">Вася</option>
-            <option value="2">Маша</option>
-            <option value="3">Даша</option>
-            <option value="4">Гомер</option>
-          </select>
+        <div className="formFieldset">
+          <div className="formControl">
+            <label htmlFor="assignee">
+              Assignee:
+            </label>
+            <select id="assignee">
+              <option value="1">Вася</option>
+              <option value="2">Маша</option>
+              <option value="3">Даша</option>
+              <option value="4">Гомер</option>
+            </select>
+          </div>
+          <div>{now.getDate()}.{String(now.getUTCMonth() + 1).padStart(2, '0')}.{now.getFullYear()}</div>
+          <div className="formControl">
+            <label htmlFor="status">
+              Status:
+            </label>
+            <select id="status">
+              <option value="1">Backlog</option>
+              <option value="2">In-progress</option>
+              <option value="3">Done</option>
+            </select>
+          </div>
         </div>
-        <input type="text" autoComplete="off" />
-        <input type="button" value="Add" />
-      </div>
+        <div className="formFieldset">
+          <textarea name="text" className="fullWidth"></textarea>
+        </div>
+        <div className="formControl formActions">
+          <button type="submit" name="action" value="edit" className="formAction">Редактировать</button>
+          <button type="submit" name="action" value="delete" className="formAction">Удалить</button>
+        </div>
+      </form>
 
       <div className="summary">
         <header className="header">Summary</header>

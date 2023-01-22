@@ -1,0 +1,108 @@
+.appContainer {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 30%; 
+  padding-right: 30%; 
+}
+
+.statContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border: 1px;
+  border-style: solid;
+}
+
+.filtersContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.newTaskForm {
+  display: block;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 40px;
+}
+
+.newTaskHeader {
+  text-align: center;
+  width: 100%;
+}
+
+.formControl {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.formFieldset {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.formActions {
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.formAction {
+  min-width: 100px;
+  padding: 8px 16px;
+}
+
+.tasksStat {
+}
+
+.appContainer > * {
+  /* padding: 10px; */
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+}
+
+.greenBackground {
+  background: lightgreen;
+}
+
+.loadButton {
+  background: lightgreen;
+}
+.loadButton:active {
+  background: green;
+}
+
+.inProgressListContainer {
+  flex: 1 0 0;
+  background: deepskyblue;
+}
+
+.backlogListContainer {
+  background: gold;
+  flex: 1 0 0;
+}
+
+.doneListContainer {
+  background: hotpink;
+  flex: 1 0 0;
+}
+
+.taskContainer {
+  border: 1px;
+  border-style: sol;
+}
