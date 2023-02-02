@@ -19,6 +19,10 @@ interface SelectComponentProps {
     data: User[]
 }
 
+interface BlaBlaBla {
+    
+}
+
 
 const SelectComponent = ({ data }: SelectComponentProps) => {
 
